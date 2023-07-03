@@ -1,0 +1,18 @@
+name: greet
+run-name:  greet 
+on: [push]
+jobs:
+   greet-user:
+      runs-on: self-hosted 
+
+      steps:
+
+      - name: greet-init
+        uses: ./.github/actions/gree-actions-js 
+        id: greet 
+        with:
+          who-to-greet: "gkemhcs"
+      - name: echo time 
+        run : echo ${{ steps.greet.outputs.time }}
+       
+          
