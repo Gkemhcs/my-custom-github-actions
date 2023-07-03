@@ -14,6 +14,6 @@ jobs:
         with:
           who-to-greet: "gkemhcs"
       - name: echo time 
-        run : echo ${{ steps.greet.outputs.time }}
+        run : echo ${{ steps.greet.outputs.greet }}
        
           
