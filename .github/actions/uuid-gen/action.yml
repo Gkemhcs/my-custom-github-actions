@@ -3,5 +3,5 @@ outputs:
     uuid:
         description: generate uuids 
 runs:
-  using: 'node'
+  using: 'node16'
   main: 'index.js'
