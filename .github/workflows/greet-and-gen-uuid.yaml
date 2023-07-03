@@ -1,0 +1,29 @@
+name: greet
+run-name:  greet 
+on: [push]
+jobs:
+   greet-user:
+      runs-on: self-hosted 
+      steps:
+      - uses: 'actions/checkout@v3'
+      - name: ls 
+        run : ls ./.github/actions/greet-actions-js 
+      - name: greet-init
+        uses: ./.github/actions/greet-actions-js 
+        id: greet 
+        with:
+          who-to-greet: "gkemhcs"
+      - name: echo time 
+        run : echo ${{ steps.greet.outputs.greet }}
+   gen-uuid:
+      runs-on: self-hosted
+      steps:
+      - name: checkout
+        uses: 'actions/checkout@v3'
+      - name: gen-uuid
+        id: uuid-gen
+        uses: ./.github/actions/uuid-gen
+      - name: print 
+        run: echo ${{ steps.uuid-gen.outputs.uuid }}
+       
+          

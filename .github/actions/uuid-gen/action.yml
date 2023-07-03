@@ -1,0 +1,7 @@
+name: 'GENERATE UUID'
+outputs:
+    uuid:
+        description: generate uuids 
+runs:
+  using: 'node'
+  main: 'index.js'
