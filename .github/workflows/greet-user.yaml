@@ -5,6 +5,8 @@ jobs:
    greet-user:
       runs-on: self-hosted 
       steps:
+      - name: checkout
+        uses: 'actions/checkout'
 
       - name: greet-init
         uses: ./.github/actions/gree-actions-js 
