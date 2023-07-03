@@ -4,7 +4,6 @@ on: [push]
 jobs:
    greet-user:
       runs-on: self-hosted 
-
       steps:
 
       - name: greet-init
